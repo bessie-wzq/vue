@@ -22,13 +22,14 @@ const routes = [
     children:[
       {
         path:'/dashbord',
+        name:'Dashbord',
         component:()=>import('../views/dashbord')
       }
     ]
   },
   {
     path: '/login',
-    // name: 'Home',  
+    name: 'Login',  
     component: () => import( '../views/Login.vue')
   },
   {

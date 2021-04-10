@@ -29,8 +29,16 @@ export default {
   methods:{
     login(){
       if(this.username=='admin'&&this.password=='admin'){
-        localStorage.setItem('token','Imlogin')
-        this.$router.push('/layout')
+        localStorage.setItem('islogin','true')
+          this.$store.commit("loginSuccess");
+          let redirect = this.$route.query.redirect; //获取redirect
+          if(redirect != undefined){
+              this.$router.replace({name:redirect})
+          }else{
+              // this.$router.replace("/")
+          this.$router.push('/home').catch(()=>{})
+
+          }
       }
       else{
         alert('login failed')
