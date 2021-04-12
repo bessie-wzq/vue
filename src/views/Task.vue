@@ -1,6 +1,6 @@
 <template>
   <div>
-      dashbord
+      任務管理
   </div>
 </template>
 

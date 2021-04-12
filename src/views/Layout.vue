@@ -1,25 +1,40 @@
 <template>
-  <div>
-    <sider-bar class="siderbar"/>
-    <div class="right">
-        <TopNav class="top"/>
-    </div>
-    
-  </div>
+  <el-container>
+  <el-aside width="200px"><SiderBar class="siderbar"/></el-aside>
+  <el-container>
+    <el-header class="header"><TopNav /></el-header>
+    <el-main class="pageview">
+      <Main />
+    </el-main>
+  </el-container>
+</el-container>
 </template>
 
 <script>
-import SiderBar from '../components/SiderBar'
 import TopNav from '../components/TopNav'
+import SiderBar from '../components/SiderBar'
+import Main from '../components/Main'
+
+
 export default {
-  components:{
+    components:{
     SiderBar,
     TopNav,
+    Main,
+    
   }
 }
 </script>
 
 <style scoped>
+.pageview{
+    height: 650px;
+    border: 1px solid #ccc;
+    margin: 30px;
+}
+.header{
+  padding: 0;
+}
 .siderbar{
     position: fixed;
     top: 0;
@@ -27,12 +42,6 @@ export default {
     left: 0;
     width: 200px;
 
-}
-.right{
-    position: relative;
-    /* left: 200px; */
-    /* margin-top: 15px; */
-    margin-left: 200px;
 }
 
 </style>

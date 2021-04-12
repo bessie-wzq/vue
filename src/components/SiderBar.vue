@@ -8,32 +8,18 @@
           text-color="#fff"
           active-text-color="#ffd04b"
           :router="true">
-          <el-submenu index="1" class="home">
-            <template slot="title">
-              <span>首頁</span>
-            </template>
-          </el-submenu>
           <el-menu-item index="/home">
-            <span slot="title">任務管理</span>
+            <span slot="title">首頁</span>
           </el-menu-item>
-          <el-menu-item index="/dashbord">
-            <span slot="title">日志</span>
+          <el-menu-item index="/schedul">
+            <span slot="title">任務調度</span>
           </el-menu-item>
-          <el-menu-item index="4">
-            <span slot="title">文檔</span>
-          </el-menu-item>
+          
           <el-menu-item index="5">
             <span slot="title">設置</span>
           </el-menu-item>
           <el-menu-item index="5">
             <span slot="title">修改密碼</span>
-          </el-menu-item>
-
-          <el-menu-item index="5">
-            <span slot="title">文檔</span>
-          </el-menu-item>
-          <el-menu-item index="5">
-            <span slot="title">文檔</span>
           </el-menu-item>
 
         </el-menu>

@@ -13,9 +13,9 @@ new Vue({
 }).$mount('#app')
 
 let islogin=localStorage.getItem("islogin")
-if(islogin){
-  store.commit("loginSuccess")
-}
+  if(islogin){
+    store.commit("loginSuccess")
+  }
 router.beforeEach((to,from,next)=>{
   // const islogin=localStorage.getItem('token')=='Imlogin'
   // if(islogin){
@@ -29,7 +29,7 @@ router.beforeEach((to,from,next)=>{
   //     next()
   //   }
   // }
-
+  
   let logined=store.state.islogin
   if(to.name=='Login'){
     if(!logined){

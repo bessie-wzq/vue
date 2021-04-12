@@ -1,14 +1,14 @@
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import layout from '../views/layout'
+import Layout from '../views/Layout'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/home', 
-    component:layout,
+    component:Layout,
     children:[
       {
         path:'/home',
@@ -17,16 +17,27 @@ const routes = [
     ]
   },
   {
-    path: '/dashbord', 
-    component:layout,
+    path: '/schedul', 
+    component:Layout,
     children:[
       {
-        path:'/dashbord',
-        name:'Dashbord',
-        component:()=>import('../views/dashbord')
+        path:'/schedul',
+        name:'Schedul',
+        component:()=>import('../views/Schedul')
       }
     ]
   },
+  // {
+  //   path: '/task', 
+  //   component:Layout,
+  //   children:[
+  //     {
+  //       path:'/task',
+  //       name:'Task',
+  //       component:()=>import('../views/Task')
+  //     }
+  //   ]
+  // },
   {
     path: '/login',
     name: 'Login',  
@@ -49,6 +60,10 @@ const routes = [
 
     
   },
+  {
+    path:'*',
+    redirect:'/'
+  }
   
 ]
 
