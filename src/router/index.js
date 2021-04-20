@@ -27,17 +27,7 @@ const routes = [
       }
     ]
   },
-  // {
-  //   path: '/task', 
-  //   component:Layout,
-  //   children:[
-  //     {
-  //       path:'/task',
-  //       name:'Task',
-  //       component:()=>import('../views/Task')
-  //     }
-  //   ]
-  // },
+  
   {
     path: '/login',
     name: 'Login',  
@@ -52,11 +42,7 @@ const routes = [
   {
     path: '/layout',
     redirect:'/home',
-    // name: 'Login',
-    // component: () => import(/* webpackChunkName: "about" */ '../views/layout.vue'),
-    // components:{
-    //   default:siderbar
-    // }
+    
 
     
   },

@@ -19,16 +19,28 @@
 </template>
 
 <script>
+import {getUser} from '../network/getdata'
 export default {
   data(){
     return{
       username:'',
-      password:''
+      password:'',
+      loginname:'',
+      loginpwd:''
     }
   },
+  created(){
+    this._getUser()
+  },
   methods:{
+    _getUser(){
+      getUser().then(res=>{
+        this.loginname=res.data.name
+        this.loginpwd=res.data.pwd
+      })
+    },
     login(){
-      if(this.username=='admin'&&this.password=='admin'){
+      if(this.username==this.loginname&&this.password==this.loginpwd){
         localStorage.setItem('islogin','true')
           this.$store.commit("loginSuccess");
           let redirect = this.$route.query.redirect; //获取redirect
